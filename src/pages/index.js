@@ -1,5 +1,5 @@
 import * as React from "react"
-import WidgetBot from '@widgetbot/react-embed'
+//import WidgetBot from '@widgetbot/react-embed'
 import {
     AppBar,
     createTheme,
@@ -337,7 +337,7 @@ const IndexPage = (props) => {
                         <Grid container item direction={"row"} spacing={2}>
                             <Grid item xs>
                                 <Typography variant={"h6"} align={"center"}>
-                                    Tea club was founded in the Fall of 2019 with the goal of bringing tea to everyone,
+                                    Tea Club was founded in the Fall of 2019 with the goal of bringing tea to everyone,
                                     meeting new people, providing a safe space to all, and just having fun. Since then,
                                     our club has grown to hundreds of people.
                                     <br/>
@@ -384,7 +384,7 @@ const IndexPage = (props) => {
                         <Typography variant={"h6"} align={"center"}>
                             We provide a variety of ways to keep yourself updated with club events.<br/>
                             If you'd like to formally join the club, feel free to fill out <Link
-                            href={"#"}
+                            href={"https://forms.gle/26qGP3S1X7xvc6fx9"}
                             target="_blank"
                             rel="noreferrer noopener"
                             aria-label="Membership Application"
@@ -459,12 +459,12 @@ const IndexPage = (props) => {
                         justifyContent={"center"}
                         style={{paddingBottom: "10vh"}}
                     >
-                        <WidgetBot
+                        {/*<WidgetBot
                             server="622881573980733456"
                             channel="622881573980733460"
                             width="55%"
                             height="600"
-                        />
+                        />*/}
                         <iframe src="https://discord.com/widget?id=622881573980733456&theme=dark" width="15%"
                                 height="600"
                                 allowTransparency="true" frameBorder="0" title="OTeaU Discord"
@@ -551,7 +551,9 @@ const IndexPage = (props) => {
                                     </a>
                                 </Grid>
                                 <Grid item>
-                                    <a href={""}
+                                    <a href={"https://github.com/SethCohen/oteau.ca"}
+                                       target="_blank"
+                                       rel="noreferrer noopener"
                                        aria-label="Github"
                                     >
                                         <SvgIcon color="primary" component={Github}/>
