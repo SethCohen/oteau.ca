@@ -1,4 +1,5 @@
 module.exports = {
+    pathPrefix: "/oteau.ca",
     siteMetadata: {
         siteUrl: "https://www.yourdomain.tld",
         title: "OTeaU",
