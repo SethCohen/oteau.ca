@@ -23,14 +23,8 @@ import Instagram from "../assets/socials/instagram.svg";
 import Discord from "../assets/socials/discord.svg";
 import Email from "../assets/socials/email.svg";
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import PropTypes from "prop-types";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import Github from "../assets/socials/github.svg";
-
-ScrollTop.propTypes = {
-    children: PropTypes.element.isRequired,
-    window: PropTypes.func,
-};
 
 const theme = createTheme({
     palette: {
@@ -147,11 +141,6 @@ function ElevationScroll(props) {
         })
     );
 }
-
-ElevationScroll.propTypes = {
-    children: PropTypes.element.isRequired,
-    window: PropTypes.func,
-};
 
 const CustomLink = withStyles({
     root: {
@@ -426,7 +415,6 @@ const IndexPage = (props) => {
                             rel="noreferrer noopener"
                             aria-label="Twitter"
                             color={"error"}
-                            className={classes.bold}
                         >
                             Twitter.
                         </Link>
