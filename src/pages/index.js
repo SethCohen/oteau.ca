@@ -1,5 +1,5 @@
 import * as React from "react"
-//import WidgetBot from '@widgetbot/react-embed'
+import WidgetBot from '@widgetbot/react-embed'
 import {
     AppBar,
     createTheme,
@@ -459,12 +459,12 @@ const IndexPage = (props) => {
                         justifyContent={"center"}
                         style={{paddingBottom: "10vh"}}
                     >
-                        {/*<WidgetBot
+                        <WidgetBot
                             server="622881573980733456"
                             channel="622881573980733460"
                             width="55%"
                             height="600"
-                        />*/}
+                        />
                         <iframe src="https://discord.com/widget?id=622881573980733456&theme=dark" width="15%"
                                 height="600"
                                 allowTransparency="true" frameBorder="0" title="OTeaU Discord"
