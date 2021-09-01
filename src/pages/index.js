@@ -1,5 +1,4 @@
 import * as React from "react"
-import WidgetBot from '@widgetbot/react-embed'
 import {
     AppBar,
     createTheme,
@@ -99,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
         bottom: 0,
         right: 0,
         left: 0,
-        backgroundColor: 'rgba(0,0,0,0.40)',
+        backgroundColor: 'rgba(0,0,0,0.20)',
     },
     headerContent: {
         position: 'relative',
@@ -220,7 +219,6 @@ const IndexPage = (props) => {
                             </Grid>
                         </Toolbar>
                     </AppBar>
-
                 </ElevationScroll>
 
                 <Paper
@@ -424,49 +422,10 @@ const IndexPage = (props) => {
                             aria-label="Mail"
                             color={"error"}
                         >ontarioteau@gmail.com</Link>
+                            <br/> <br/>
                         </Typography>
-                    </Grid>
-                    <Grid
-                        item
-                        id={"discord"}
-                        xs={6}
-                    >
-                        <div className={classes.toolbar}/>
-                        <Paper
-                            style={{
-                                padding: "0.5em 2em",
-                                borderRadius: "10em",
-                                background: "rgba(0,0,0,0.25)",
-                            }}
-                            elevation={0}
-                        >
-                            <Typography variant={"h4"} align={"center"}>
-                                <Link
-                                    href={"https://discord.gg/ThKymzr"}
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                    aria-label="Discord"
-                                >Come chat with us on Discord!</Link>
-                            </Typography>
-                        </Paper>
-                        <div style={{width: "100vw"}}/>
-                    </Grid>
-                    <Grid
-                        item
-                        direction={"row"}
-                        container
-                        alignItems={"center"}
-                        justifyContent={"center"}
-                        style={{paddingBottom: "10vh"}}
-                    >
-                        <WidgetBot
-                            server="622881573980733456"
-                            channel="622881573980733460"
-                            width="55%"
-                            height="600"
-                        />
-                        <iframe src="https://discord.com/widget?id=622881573980733456&theme=dark" width="15%"
-                                height="600"
+                        <iframe id={"discord"} src="https://discord.com/widget?id=622881573980733456&theme=dark"
+                                height="500vh"
                                 allowTransparency="true" frameBorder="0" title="OTeaU Discord"
                                 sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"/>
                     </Grid>
