@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
         transition: "0.5s all"
     },
     padding: {
-        margin: "5% 0",
+        margin: "1% 0",
         minHeight: "100vh",
     },
     zoom: {
@@ -372,12 +372,6 @@ const IndexPage = (props) => {
                                         </CustomLink>
                                     </Grid>
                                     <Grid item>
-                                        <CustomLink underline="none" onClick={() => scrollTo("#discord")}
-                                                    variant={"h6"}>
-                                            Discord
-                                        </CustomLink>
-                                    </Grid>
-                                    <Grid item>
                                         <CustomLink underline="none" onClick={() => scrollTo("#sponsors")}
                                                     variant={"h6"}>
                                             Our Sponsors
@@ -572,7 +566,7 @@ const IndexPage = (props) => {
                         >
                             this form</Link>.
                             <br/><br/>
-                            We highly recommend joining us on <Link
+                            We also highly recommend joining us on <Link
                             href={"https://discord.gg/ThKymzr"}
                             target="_blank"
                             rel="noreferrer noopener"
@@ -606,7 +600,7 @@ const IndexPage = (props) => {
                         >ontarioteau@gmail.com</Link>
                             <br/> <br/>
                         </Typography>
-                        <Grid container item justifyContent={"center"} id={"discord"}>
+                        <Grid container item justifyContent={"center"}>
                             <Paper component={Link} href={"https://discord.gg/ThKymzr"}
                                    title="Join us on Discord"
                                    target="_blank"
