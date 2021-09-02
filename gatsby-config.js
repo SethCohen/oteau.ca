@@ -2,6 +2,7 @@ module.exports = {
     pathPrefix: "/oteau.ca",
     siteMetadata: {
         title: "OTeaU",
+        description: "The Official Ontario Tech University Tea Club Website."
     },
     plugins: [
         {
@@ -10,8 +11,15 @@ module.exports = {
                 name: `oteau`,
                 short_name: `oteau`,
                 start_url: `/`,
+                background_color: `#282828`,
+                theme_color: `#ffffff`,
                 display: `standalone`,
                 icon: `src/assets/icon.png`,
+                icon_options: {
+                    // For all the options available,
+                    // please see the section "Additional Resources" below.
+                    purpose: `any maskable`,
+                },
             },
         },
         {
@@ -41,6 +49,7 @@ module.exports = {
                 }
             }
         },
-        `gatsby-plugin-smoothscroll`
+        `gatsby-plugin-smoothscroll`,
+        `gatsby-plugin-offline`
     ],
 };

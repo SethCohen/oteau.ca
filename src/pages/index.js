@@ -100,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.grey[800],
         color: theme.palette.common.white,
         marginBottom: theme.spacing(4),
-        backgroundImage: 'url(https://source.unsplash.com/dPUWgZLsOk8/1920x1080)',
+        backgroundImage: `url(https://source.unsplash.com/dPUWgZLsOk8/1920x1080)`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -245,6 +245,8 @@ const IndexPage = (props) => {
             <main className={classes.root}>
                 <Helmet>
                     <title>OTeaU</title>
+                    <meta charSet="utf-8" />
+                    <meta name="description" content="The Official Ontario Tech University Tea Club Website."/>
                     <html lang="en"/>
                 </Helmet>
                 <CssBaseline/>
