@@ -32,6 +32,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import PeopleIcon from '@material-ui/icons/People';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import {Helmet} from "react-helmet";
 
 const drawerWidth = 200;
 
@@ -49,7 +50,7 @@ const theme = createTheme({
             main: "rgba(5,5,5,0.95)"
         },
         error: {
-            main: "rgb(0,123,255)"
+            main: "rgb(117,184,255)"
         },
         background: {
             default: "rgb(40,40,40)"
@@ -242,7 +243,10 @@ const IndexPage = (props) => {
     return (
         <MuiThemeProvider theme={responsiveFontSizes(theme)}>
             <main className={classes.root}>
-                <title>OTeaU</title>
+                <Helmet>
+                    <title>OTeaU</title>
+                    <html lang="en"/>
+                </Helmet>
                 <CssBaseline/>
 
                 {isSmall ?
@@ -353,7 +357,7 @@ const IndexPage = (props) => {
                             className={classes.appbar}
                         >
                             <Toolbar style={{minWidth: "100vw", alignItems: "center", justifyContent: "center"}}>
-                                <Grid container direction={"row"} justifyContent={"center"} lg={6} xs={12} spacing={4}>
+                                <Grid container item direction={"row"} justifyContent={"center"} lg={6} xs={12} spacing={4}>
                                     <Grid item>
                                         <CustomLink underline="none" onClick={() => scrollTo("#home")} variant={"h6"}>
                                             Home
@@ -393,6 +397,7 @@ const IndexPage = (props) => {
                     <Grid
                         className={classes.headerContent}
                         container
+                        item
                         spacing={3}
                         xs={12}
                         justifyContent={"center"}
@@ -466,6 +471,7 @@ const IndexPage = (props) => {
                 <Grid
                     container
                     spacing={3}
+                    item
                     xs={12}
                     style={{margin: 0}}
                     justifyContent={"center"}
@@ -497,7 +503,7 @@ const IndexPage = (props) => {
                         </Paper>
                         <Grid container item direction={"row"} spacing={2}>
                             <Grid item xs>
-                                <Typography variant={"h6"} align={"center"}>
+                                <Typography variant={"h6"} component={"p"} align={"center"}>
                                     In the Fall of 2019, Tea Club was founded by a group of five dedicated tea lovers.
                                     The goal of this club was to bring everyone together to drink tea, meet new people,
                                     provide a safe space, and have fun! Since Fall of 2019, the OTeaU has grown to be a
@@ -556,7 +562,7 @@ const IndexPage = (props) => {
                                 </Link>
                             </Typography>
                         </Paper>
-                        <Typography variant={"h6"} align={"center"}>
+                        <Typography variant={"h6"} component={"p"} align={"center"}>
                             If you'd like to formally join the club, feel free to fill out <Link
                             href={"https://forms.gle/26qGP3S1X7xvc6fx9"}
                             target="_blank"
@@ -637,7 +643,7 @@ const IndexPage = (props) => {
                                 </Link>
                             </Typography>
                         </Paper>
-                        <Typography variant={"h6"} align={"center"}>
+                        <Typography variant={"h6"} component={"p"} align={"center"}>
                             Thanks to the following sponsors for helping with events, funding the club, and more:
                             <br/>
                             :'(
