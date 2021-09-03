@@ -1,4 +1,4 @@
-## [OTeaU.ca](https://sethcohen.github.io/oteau.ca/ "oteau.ca")
+## [OTeaU.ca](https://oteau.ca/ "oteau.ca")
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/SethCohen/oteau.ca?style=for-the-badge)
 
