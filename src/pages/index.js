@@ -33,6 +33,8 @@ import PeopleIcon from '@material-ui/icons/People';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import {Helmet} from "react-helmet";
+import PropTypes from "prop-types";
+import {graphql, useStaticQuery} from "gatsby";
 
 const drawerWidth = 200;
 
@@ -225,6 +227,65 @@ const CustomLink = withStyles({
     },
 })(Link);
 
+function Seo({description, lang, meta, title}) {
+    const {site} = useStaticQuery(
+        graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+          }
+        }
+      }
+    `
+    )
+
+    const metaDescription = description || site.siteMetadata.description
+    const defaultTitle = site.siteMetadata?.title
+
+    return (
+        <Helmet
+            htmlAttributes={{
+                lang,
+            }}
+            title={defaultTitle}
+            titleTemplate={defaultTitle}
+            meta={[
+                {
+                    name: `description`,
+                    content: metaDescription,
+                },
+                {
+                    property: `og:title`,
+                    content: title,
+                },
+                {
+                    property: `og:description`,
+                    content: metaDescription,
+                },
+                {
+                    property: `og:type`,
+                    content: `website`,
+                },
+            ].concat(meta)}
+        />
+    )
+}
+
+Seo.defaultProps = {
+    lang: `en`,
+    meta: [],
+    description: ``,
+}
+
+Seo.propTypes = {
+    description: PropTypes.string,
+    lang: PropTypes.string,
+    meta: PropTypes.arrayOf(PropTypes.object),
+    title: PropTypes.string.isRequired,
+}
+
 
 const IndexPage = (props) => {
     const classes = useStyles();
@@ -243,12 +304,7 @@ const IndexPage = (props) => {
     return (
         <MuiThemeProvider theme={responsiveFontSizes(theme)}>
             <main className={classes.root}>
-                <Helmet>
-                    <title>OTeaU</title>
-                    <meta charSet="utf-8" />
-                    <meta name="description" content="The Official Ontario Tech University Tea Club Website."/>
-                    <html lang="en"/>
-                </Helmet>
+                <Seo title={"OTeaU"}/>
                 <CssBaseline/>
 
                 {isSmall ?
@@ -359,7 +415,8 @@ const IndexPage = (props) => {
                             className={classes.appbar}
                         >
                             <Toolbar style={{minWidth: "100vw", alignItems: "center", justifyContent: "center"}}>
-                                <Grid container item direction={"row"} justifyContent={"center"} lg={6} xs={12} spacing={4}>
+                                <Grid container item direction={"row"} justifyContent={"center"} lg={6} xs={12}
+                                      spacing={4}>
                                     <Grid item>
                                         <CustomLink underline="none" onClick={() => scrollTo("#home")} variant={"h6"}>
                                             Home
@@ -514,7 +571,8 @@ const IndexPage = (props) => {
                                     <br/>
                                     OTeaU hosts a variety of events that include gaming and movie nights, general
                                     socializing, and study spaces (that cater for both loud and quiet studying). Of
-                                    course, all of them catered with tea. While in person, OTeaU allows for tea exchanges
+                                    course, all of them catered with tea. While in person, OTeaU allows for tea
+                                    exchanges
                                     and tea testing of a wide selection.
                                     <br/>
                                     <br/>
