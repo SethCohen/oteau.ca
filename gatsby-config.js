@@ -2,7 +2,7 @@ module.exports = {
     siteMetadata: {
         siteUrl: `https://www.oteau.ca/`,
         title: "OTeaU",
-        description: "The Official Ontario Tech University Tea Club Website."
+        description: "The Official Ontario Tech University Tea Club."
     },
     plugins: [
         {
@@ -12,7 +12,7 @@ module.exports = {
                 short_name: `oteau`,
                 start_url: `/`,
                 background_color: `#282828`,
-                theme_color: `#ffffff`,
+                theme_color: `#4069b2`,
                 display: `standalone`,
                 icon: `src/assets/icon.png`,
                 icon_options: {
@@ -50,6 +50,7 @@ module.exports = {
             }
         },
         `gatsby-plugin-smoothscroll`,
-        `gatsby-plugin-offline`
+        `gatsby-plugin-offline`,
+        `gatsby-plugin-react-helmet`
     ],
 };
