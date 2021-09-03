@@ -1,6 +1,6 @@
 module.exports = {
-    pathPrefix: "/oteau.ca",
     siteMetadata: {
+        siteUrl: `https://www.oteau.ca/`,
         title: "OTeaU",
         description: "The Official Ontario Tech University Tea Club Website."
     },
