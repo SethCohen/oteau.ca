@@ -566,7 +566,7 @@ const IndexPage = (props) => {
                                     In the Fall of 2019, Tea Club was founded by a group of five dedicated tea lovers.
                                     The goal of this club was to bring everyone together to drink tea, meet new people,
                                     provide a safe space, and have fun! Since Fall of 2019, the OTeaU has grown to be a
-                                    community of over a couple hundred students.
+                                    community of over several hundred students.
                                     <br/>
                                     <br/>
                                     OTeaU hosts a variety of events that include gaming and movie nights, general
@@ -624,7 +624,7 @@ const IndexPage = (props) => {
                         </Paper>
                         <Typography variant={"h6"} component={"p"} align={"center"}>
                             If you'd like to formally join the club, feel free to fill out <Link
-                            href={"https://forms.gle/26qGP3S1X7xvc6fx9"}
+                            href={"https://forms.gle/g9ttPBrBbvGjFZQS9"}
                             target="_blank"
                             rel="noreferrer noopener"
                             aria-label="Membership Application"
